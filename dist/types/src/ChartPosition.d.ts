@@ -1,7 +1,7 @@
 export default class ChartPosition {
     constructor({ horizonDegrees, eclipticDegrees }?: {
-        horizonDegrees?: number;
-        eclipticDegrees?: number;
+        horizonDegrees?: number | undefined;
+        eclipticDegrees?: number | undefined;
     });
     Horizon: {
         DecimalDegrees: number;

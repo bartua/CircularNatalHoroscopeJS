@@ -30,14 +30,14 @@ export class Horoscope {
         levelLabel: any;
     }[];
     constructor({ origin, language, houseSystem, zodiac, aspectPoints, aspectWithPoints, aspectTypes, customOrbs, }?: {
-        origin?: any;
-        language?: string;
-        houseSystem?: string;
-        zodiac?: string;
-        aspectPoints?: string[];
-        aspectWithPoints?: string[];
-        aspectTypes?: string[];
-        customOrbs?: {};
+        origin?: null | undefined;
+        language?: string | undefined;
+        houseSystem?: string | undefined;
+        zodiac?: string | undefined;
+        aspectPoints?: string[] | undefined;
+        aspectWithPoints?: string[] | undefined;
+        aspectTypes?: string[] | undefined;
+        customOrbs?: {} | undefined;
     });
     origin: any;
     _language: string;
@@ -55,7 +55,7 @@ export class Horoscope {
         Sign: any;
         ChartPosition: ChartPosition;
     };
-    _sunSign: Sign;
+    _sunSign: Sign | undefined;
     _houses: any;
     _zodiacCusps: {
         ChartPosition: ChartPosition;
@@ -85,7 +85,7 @@ export class Horoscope {
         Sign: any;
         ChartPosition: ChartPosition;
     };
-    createSunSign(zodiac: any, language: any): Sign;
+    createSunSign(zodiac: any, language: any): Sign | undefined;
     createZodiacCusps(): {
         ChartPosition: ChartPosition;
         Sign: any;
@@ -105,7 +105,7 @@ export class Horoscope {
         Sign: any;
         ChartPosition: ChartPosition;
     };
-    get SunSign(): Sign;
+    get SunSign(): Sign | undefined;
     get Houses(): any;
     get ZodiacCusps(): {
         ChartPosition: ChartPosition;
@@ -121,5 +121,5 @@ export class Horoscope {
     };
 }
 export default Horoscope;
-import ChartPosition from "./ChartPosition";
-import Sign from "./Sign";
+import ChartPosition from './ChartPosition';
+import Sign from './Sign';

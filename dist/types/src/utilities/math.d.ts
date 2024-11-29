@@ -6,12 +6,12 @@ export function cosFromDegrees(degrees: any): number;
 export function tanFromDegrees(degrees: any): number;
 export function modulo(number: any, mod: any): number;
 export function hourTimeToDecimal({ hour, minute }?: {
-    hour?: number;
-    minute?: number;
-}): any;
+    hour?: number | undefined;
+    minute?: number | undefined;
+}): number;
 export function decimalTimeToHour({ decimal }?: {
-    decimal?: number;
-}): any;
+    decimal?: number | undefined;
+}): moment.Duration;
 export function decimalDegreesToDMS(decimalDegrees: any): {
     degrees: number;
     minutes: number;
@@ -19,3 +19,4 @@ export function decimalDegreesToDMS(decimalDegrees: any): {
 };
 export function isDegreeWithinCircleArc(arcLow: any, arcHigh: any, degree: any, edges?: string): any;
 export function getModuloDifference(point1: any, point2: any): number;
+import moment from 'moment';

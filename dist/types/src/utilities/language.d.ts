@@ -1,5 +1,5 @@
 export namespace LANGUAGE {
-    const en: {
+    let en: {
         label: string;
         ascendant: string;
         midheaven: string;
@@ -65,7 +65,7 @@ export namespace LANGUAGE {
         major: string;
         minor: string;
     };
-    const es: {
+    let es: {
         label: string;
         ascendant: string;
         midheaven: string;

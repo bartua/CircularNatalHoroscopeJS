@@ -1,13 +1,13 @@
 export class Origin {
     constructor({ year, month, date, hour, minute, second, latitude, longitude }?: {
-        year?: number;
-        month?: number;
-        date?: number;
-        hour?: number;
-        minute?: number;
-        second?: number;
-        latitude?: number;
-        longitude?: number;
+        year?: number | undefined;
+        month?: number | undefined;
+        date?: number | undefined;
+        hour?: number | undefined;
+        minute?: number | undefined;
+        second?: number | undefined;
+        latitude?: number | undefined;
+        longitude?: number | undefined;
     });
     year: any;
     month: any;
@@ -25,12 +25,13 @@ export class Origin {
         second: number;
         millisecond: number;
     };
-    timezone: any;
-    localTime: any;
-    localTimeFormatted: any;
-    utcTime: any;
-    utcTimeFormatted: any;
+    timezone: moment.MomentZone | null;
+    localTime: moment.Moment;
+    localTimeFormatted: string;
+    utcTime: moment.Moment;
+    utcTimeFormatted: string;
     julianDate: number;
     localSiderealTime: number;
 }
 export default Origin;
+import moment from 'moment-timezone';
